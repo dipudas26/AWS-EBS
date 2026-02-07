@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #74ebd5, #9face6);
+            color: #fff;
+            font-size: 3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="greeting"></div>
+
+    <script>
+        const greetingElement = document.getElementById("greeting");
+        const hour = new Date().getHours();
+
+        let greeting;
+
+        if (hour < 12) {
+            greeting = "Good Morning ☀️";
+        } else if (hour < 18) {
+            greeting = "Good Afternoon 🌤️";
+        } else {
+            greeting = "Good Evening 🌙";
+        }
+
+        greetingElement.textContent = greeting;
+    </script>
+
+</body>
+</html>
